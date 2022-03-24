@@ -22,7 +22,7 @@ public static int knapSack(int Capacity, int wt[], int val[], int n)
         
         int nonPickItem =  maxProfit(capacity , weight, profit,currIndex+1,  n, map);
         
-         map.put(key, Math.max(pickItem, nonPickItem));                // T.C 0(n)  S.C 0(n)
+         map.put(key, Math.max(pickItem, nonPickItem));                // T.C n S.C:  0(n x w) we check the items in key which are changing there is  number of items n and weight of each item w.
         
         return map.get(key);
         
